@@ -206,11 +206,11 @@
             gap: 15px;
         }
 
-        .coin-animation {
+        .logo-animation {
             width: 400px;
             height: 400px;
             background: var(--gradient);
-            border-radius: 50%;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -218,16 +218,20 @@
             animation: float 6s ease-in-out infinite;
             box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
             margin: 0 auto;
+            overflow: hidden;
         }
 
-        .coin-animation i {
-            font-size: 150px;
-            color: white;
+        .logo-animation img {
+            width: 80%;
+            height: auto;
+            filter: brightness(0) invert(1);
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(0deg); }
+            75% { transform: translateY(-20px) rotate(-2deg); }
         }
 
         /* Token Info Section */
@@ -718,13 +722,9 @@
                 font-size: 2.5rem;
             }
 
-            .coin-animation {
+            .logo-animation {
                 width: 300px;
                 height: 300px;
-            }
-
-            .coin-animation i {
-                font-size: 100px;
             }
 
             .section-title h2 {
@@ -794,8 +794,8 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="coin-animation">
-                        <i class="fas fa-coins"></i>
+                    <div class="logo-animation">
+                        <img src="https://i.ibb.co/yvLVD3j/logo.png" alt="DM Coin Logo">
                     </div>
                 </div>
             </div>
